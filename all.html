@@ -5,80 +5,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nomy - Documentation</title>
 <style>
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(160deg, #1e293b, #7f1d1d);
-        color: #f1f5f9;
-        margin: 0;
-        padding: 0;
-    }
-    header {
-        background: #0f172a;
-        padding: 20px;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: bold;
-        color: #fbbf24;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-    }
-    nav {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin: 20px 0;
-    }
-    nav button {
-        padding: 10px 20px;
-        background: #1e293b;
-        color: #f1f5f9;
-        border: 2px solid #fbbf24;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: 0.2s;
-    }
-    nav button:hover {
-        background: #fbbf24;
-        color: #1e293b;
-    }
-    .section {
-        max-width: 900px;
-        margin: 20px auto;
-        padding: 30px;
-        background: rgba(15,23,42,0.95);
-        border-radius: 12px;
-        display: none;
-        font-size: 18px;
-        line-height: 1.8;
-    }
-    .section.active {
-        display: block;
-    }
-    h1 {
-        text-align: center;
-        color: #fbbf24;
-        font-size: 2rem;
-    }
-    h2 {
-        color: #fbbf24;
-        font-size: 1.5rem;
-        margin-top: 25px;
-    }
-    ul {
-        margin-left: 20px;
-    }
-    img.logo {
-        display: block;
-        margin: 20px auto;
-        max-width: 300px;
-        border-radius: 12px;
-        border: 2px solid #fbbf24;
-    }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(160deg,#1e293b,#7f1d1d);
+    color: #f1f5f9;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #0f172a;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fbbf24;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+nav button {
+    padding: 10px 20px;
+    background: #1e293b;
+    color: #f1f5f9;
+    border: 2px solid #fbbf24;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+nav button:hover { background: #fbbf24; color: #1e293b; }
+.section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(15,23,42,0.95);
+    border-radius: 12px;
+    display: none;
+    font-size: 18px;
+    line-height: 1.8;
+}
+.section.active { display: block; }
+h1 { text-align:center; color:#fbbf24; font-size:2rem; }
+h2 { color:#fbbf24; font-size:1.5rem; margin-top:25px; }
+ul { margin-left:20px; }
+img.logo { display:block; margin:20px 0; max-width:300px; border-radius:12px; border:2px solid #fbbf24; }
+.lang-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background:#1e293b;
+    color:#fbbf24;
+    border:2px solid #fbbf24;
+    border-radius:8px;
+    padding:8px 12px;
+    cursor:pointer;
+    font-weight:bold;
+}
+.lang-toggle:hover { background:#fbbf24; color:#1e293b; }
 </style>
 </head>
 <body>
 
 <header>Nomy - Documentation</header>
+<button class="lang-toggle" onclick="toggleLanguage()">EN / FR</button>
 
 <nav>
     <button onclick="showSection('privacy')">Privacy Policy</button>
@@ -86,89 +80,162 @@
     <button onclick="showSection('credits')">Crédits</button>
 </nav>
 
-<!-- Privacy Policy -->
-<div id="privacy" class="section active">
-    <h1>Privacy Policy</h1>
-    <p>
-        La sécurité et la confidentialité de vos données sont importantes pour Nomy. Cette Privacy Policy explique quelles données sont collectées et comment elles sont utilisées.
-    </p>
-
-    <h2>Données collectées :</h2>
-    <ul>
-        <li><strong>ID Discord :</strong> identifiant unique de chaque utilisateur.</li>
-        <li><strong>ID serveur et salons :</strong> pour appliquer les commandes et logs.</li>
-        <li><strong>Messages :</strong> uniquement pour le filtrage des mots bannis, modération et tickets.</li>
-        <li><strong>Rôles et niveaux :</strong> pour le système d’XP et rôles automatiques.</li>
-        <li><strong>Logs de modération :</strong> avertissements, mutes, bans, fermeture de tickets.</li>
-        <li><strong>Transcriptions de tickets :</strong> sauvegardées pour le suivi interne du serveur.</li>
-    </ul>
-
-    <h2>Utilisation des données :</h2>
-    <ul>
-        <li>Assurer le fonctionnement correct des commandes de modération et sécurité.</li>
-        <li>Enregistrer les logs pour suivi et transparence.</li>
-        <li>Gérer le système d’XP et les rôles automatiques.</li>
-        <li>Fournir un support via tickets privés avec le staff.</li>
-    </ul>
-
-    <h2>Partage et sécurité :</h2>
-    <ul>
-        <li>Aucune donnée n’est vendue ou partagée avec des tiers.</li>
-        <li>Les données sont conservées uniquement le temps nécessaire au bon fonctionnement du bot.</li>
-        <li>Seuls les membres autorisés du serveur peuvent voir les logs et transcriptions de tickets.</li>
-    </ul>
-
-    <h2>Suppression des données :</h2>
-    <ul>
-        <li>Les données peuvent être supprimées si le bot est retiré du serveur.</li>
-        <li>Vous pouvez demander à un administrateur de supprimer vos données collectées par Nomy.</li>
-    </ul>
+<!-- Privacy Policy FR -->
+<div id="privacy-fr" class="section active">
+<h1>Privacy Policy</h1>
+<p>Nomy respecte votre vie privée. Cette politique décrit quelles données sont collectées, pourquoi elles le sont et comment elles sont protégées.</p>
+<h2>Données collectées :</h2>
+<ul>
+<li><strong>ID Discord :</strong> identifiant unique de chaque utilisateur.</li>
+<li><strong>ID serveur et salons :</strong> nécessaires pour les commandes, logs et tickets.</li>
+<li><strong>Messages :</strong> utilisés uniquement pour la modération et les tickets.</li>
+<li><strong>Rôles et niveaux :</strong> pour le système d’XP et l’attribution automatique des rôles.</li>
+<li><strong>Logs de modération :</strong> avertissements, mutes, bans, fermetures de tickets.</li>
+<li><strong>Transcriptions de tickets :</strong> sauvegardées pour le suivi du support et du serveur.</li>
+</ul>
+<h2>Utilisation des données :</h2>
+<ul>
+<li>Assurer le fonctionnement des fonctionnalités du bot.</li>
+<li>Gérer les niveaux et rôles automatiques.</li>
+<li>Fournir un support via tickets privés.</li>
+<li>Enregistrer les logs pour sécurité et transparence.</li>
+</ul>
+<h2>Partage et sécurité :</h2>
+<ul>
+<li>Aucune donnée n’est partagée ou vendue à des tiers.</li>
+<li>Les informations sont accessibles uniquement aux membres du staff autorisés.</li>
+<li>Les données sont conservées uniquement pour le bon fonctionnement du bot.</li>
+</ul>
+<h2>Suppression des données :</h2>
+<ul>
+<li>Les données peuvent être supprimées si le bot est retiré du serveur.</li>
+<li>Demande de suppression possible via un administrateur du serveur.</li>
+</ul>
 </div>
 
-<!-- Terms of Service -->
-<div id="tos" class="section">
-    <h1>Terms of Service</h1>
-    <p>
-        En utilisant Nomy, vous acceptez les conditions suivantes :
-    </p>
-
-    <h2>1. Utilisation autorisée :</h2>
-    <ul>
-        <li>Le bot doit être utilisé conformément aux règles Discord et aux lois locales.</li>
-        <li>Aucune utilisation malveillante, spam ou contournement des fonctions de modération.</li>
-        <li>Respect des décisions de modération prises automatiquement ou par le staff.</li>
-    </ul>
-
-    <h2>2. Responsabilité :</h2>
-    <ul>
-        <li>Nomy est fourni "tel quel", sans garantie de disponibilité continue.</li>
-        <li>L’équipe Nomy's Dev n’est pas responsable des pertes de données ou incidents techniques.</li>
-        <li>Toute action abusive peut entraîner la suspension de l’accès au bot sur le serveur.</li>
-    </ul>
-
-    <h2>3. Modifications :</h2>
-    <ul>
-        <li>Ces termes peuvent être modifiés à tout moment. Les modifications prennent effet dès leur publication.</li>
-    </ul>
+<!-- Privacy Policy EN -->
+<div id="privacy-en" class="section">
+<h1>Privacy Policy</h1>
+<p>Nomy values your privacy. This policy explains what data is collected, why, and how it is protected.</p>
+<h2>Data Collected:</h2>
+<ul>
+<li><strong>Discord ID:</strong> unique identifier for each user.</li>
+<li><strong>Server and channel IDs:</strong> required for commands, logs, and tickets.</li>
+<li><strong>Messages:</strong> used only for moderation and support tickets.</li>
+<li><strong>Roles and levels:</strong> for XP and automatic role assignment.</li>
+<li><strong>Moderation logs:</strong> warnings, mutes, bans, ticket closures.</li>
+<li><strong>Ticket transcripts:</strong> saved for support tracking.</li>
+</ul>
+<h2>Data Usage:</h2>
+<ul>
+<li>Ensure bot commands and features work properly.</li>
+<li>Manage XP and automatic roles.</li>
+<li>Provide private support via tickets.</li>
+<li>Record logs for security and transparency.</li>
+</ul>
+<h2>Sharing and Security:</h2>
+<ul>
+<li>No data is sold or shared with third parties.</li>
+<li>Data is accessible only to authorized staff members.</li>
+<li>Data is kept only as long as necessary for bot functionality.</li>
+</ul>
+<h2>Data Deletion:</h2>
+<ul>
+<li>Data can be deleted if the bot is removed from the server.</li>
+<li>You may request deletion via a server administrator.</li>
+</ul>
 </div>
 
-<!-- Credits -->
+<!-- TOS FR -->
+<div id="tos-fr" class="section">
+<h1>Terms of Service</h1>
+<p>En utilisant Nomy, vous acceptez les conditions suivantes :</p>
+<h2>1. Utilisation :</h2>
+<ul>
+<li>Respect des règles Discord et des lois locales.</li>
+<li>Pas d’abus, spam ou exploitation des fonctionnalités du bot.</li>
+<li>Respect des sanctions appliquées par le bot ou par le staff.</li>
+<li>Utilisation uniquement sur des serveurs où vous avez la permission d’utiliser le bot.</li>
+</ul>
+<h2>2. Collecte et usage des données :</h2>
+<ul>
+<li>Nomy collecte certaines informations pour le fonctionnement du bot (voir Privacy Policy).</li>
+<li>Les données sont utilisées pour modération, tickets, XP et rôles automatiques.</li>
+<li>L’équipe Nomy's Dev ne vend ni ne partage vos informations.</li>
+</ul>
+<h2>3. Responsabilité :</h2>
+<ul>
+<li>Le bot est fourni "tel quel".</li>
+<li>L’équipe Nomy's Dev n’est pas responsable de pertes de données, bugs ou interruptions.</li>
+<li>Tout usage abusif peut entraîner la suspension ou le bannissement du bot sur le serveur.</li>
+</ul>
+<h2>4. Modifications :</h2>
+<ul>
+<li>Ces termes peuvent être modifiés à tout moment. Les changements sont effectifs dès publication.</li>
+<li>Il est de votre responsabilité de vérifier les conditions régulièrement.</li>
+</ul>
+</div>
+
+<!-- TOS EN -->
+<div id="tos-en" class="section">
+<h1>Terms of Service</h1>
+<p>By using Nomy, you agree to the following terms:</p>
+<h2>1. Usage:</h2>
+<ul>
+<li>Follow Discord rules and local laws.</li>
+<li>No abuse, spam, or exploiting bot features.</li>
+<li>Respect moderation applied by the bot or staff.</li>
+<li>Use only on servers where you have permission.</li>
+</ul>
+<h2>2. Data Collection and Use:</h2>
+<ul>
+<li>Nomy collects certain information for bot functionality (see Privacy Policy).</li>
+<li>Data is used for moderation, tickets, XP, and roles.</li>
+<li>Nomy's Dev Team does not sell or share your information.</li>
+</ul>
+<h2>3. Liability:</h2>
+<ul>
+<li>Bot is provided "as is".</li>
+<li>Nomy's Dev Team is not responsible for data loss, bugs, or downtime.</li>
+<li>Abuse may result in bot suspension or ban on your server.</li>
+</ul>
+<h2>4. Changes:</h2>
+<ul>
+<li>These terms may change at any time. Changes take effect immediately upon publication.</li>
+<li>You are responsible for checking terms regularly.</li>
+</ul>
+</div>
+
+<!-- Credits (identique FR/EN) -->
 <div id="credits" class="section">
-    <h1>Crédits</h1>
-    <p style="text-align:center;">Création et développement :</p>
-    <ul style="text-align:center; list-style-type:none;">
-        <li>Nomy's Dev Team</li>
-        <li>Logo et design graphique réalisés par l'équipe interne</li>
-        <li>Documentation et site web par le même staff</li>
-    </ul>
-    <img class="logo" src="nomysdev.png" alt="Logo Nomy's Dev">
+<h1>Crédits / Credits</h1>
+<p>Création et développement :</p>
+<ul>
+<li>Nomy's Dev Team</li>
+<li>Logo et design graphique réalisés par l'équipe interne</li>
+<li>Documentation et site web par le même staff</li>
+</ul>
+<img class="logo" src="54606503-b5ee-462a-90c9-256b4f5041f7.png" alt="Logo Nomy's Dev">
 </div>
 
 <script>
-function showSection(sectionId) {
+let language = 'fr';
+
+function showSection(section){
     const sections = document.querySelectorAll('.section');
-    sections.forEach(sec => sec.classList.remove('active'));
-    document.getElementById(sectionId).classList.add('active');
+    sections.forEach(s=>s.style.display='none');
+    if(section === 'privacy'){
+        document.getElementById('privacy-'+language).style.display='block';
+    } else if(section === 'tos'){
+        document.getElementById('tos-'+language).style.display='block';
+    } else {
+        document.getElementById('credits').style.display='block';
+    }
+}
+
+function toggleLanguage(){
+    language = language==='fr'?'en':'fr';
+    showSection('privacy'); // reset sur Privacy
 }
 </script>
 
