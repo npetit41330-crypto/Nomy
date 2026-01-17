@@ -44,10 +44,12 @@
     .section {
         max-width: 900px;
         margin: 20px auto;
-        padding: 20px;
-        background: rgba(15,23,42,0.9);
+        padding: 30px;
+        background: rgba(15,23,42,0.95);
         border-radius: 12px;
         display: none;
+        font-size: 18px;
+        line-height: 1.8;
     }
     .section.active {
         display: block;
@@ -55,9 +57,15 @@
     h1 {
         text-align: center;
         color: #fbbf24;
+        font-size: 2rem;
+    }
+    h2 {
+        color: #fbbf24;
+        font-size: 1.5rem;
+        margin-top: 25px;
     }
     ul {
-        line-height: 1.6;
+        margin-left: 20px;
     }
     img.logo {
         display: block;
@@ -82,16 +90,39 @@
 <div id="privacy" class="section active">
     <h1>Privacy Policy</h1>
     <p>
-        Nomy respecte votre vie privée. Voici comment vos informations sont utilisées :
+        La sécurité et la confidentialité de vos données sont importantes pour Nomy. Cette Privacy Policy explique quelles données sont collectées et comment elles sont utilisées.
     </p>
+
+    <h2>Données collectées :</h2>
     <ul>
-        <li>Le bot collecte uniquement les données nécessaires à son fonctionnement (ID Discord, messages pour modération, XP et économie).</li>
-        <li>Aucune information personnelle n'est partagée avec des tiers.</li>
-        <li>Les tickets support peuvent contenir vos messages, visibles seulement par le staff et l'utilisateur qui a ouvert le ticket.</li>
-        <li>Les logs de modération sont stockés pour assurer la sécurité et la transparence sur le serveur.</li>
-        <li>Vous pouvez demander la suppression de vos données via un administrateur du serveur où Nomy est présent.</li>
+        <li><strong>ID Discord :</strong> identifiant unique de chaque utilisateur.</li>
+        <li><strong>ID serveur et salons :</strong> pour appliquer les commandes et logs.</li>
+        <li><strong>Messages :</strong> uniquement pour le filtrage des mots bannis, modération et tickets.</li>
+        <li><strong>Rôles et niveaux :</strong> pour le système d’XP et rôles automatiques.</li>
+        <li><strong>Logs de modération :</strong> avertissements, mutes, bans, fermeture de tickets.</li>
+        <li><strong>Transcriptions de tickets :</strong> sauvegardées pour le suivi interne du serveur.</li>
     </ul>
-    <p>Pour toute question concernant la vie privée, contactez Nomy's Dev Team.</p>
+
+    <h2>Utilisation des données :</h2>
+    <ul>
+        <li>Assurer le fonctionnement correct des commandes de modération et sécurité.</li>
+        <li>Enregistrer les logs pour suivi et transparence.</li>
+        <li>Gérer le système d’XP et les rôles automatiques.</li>
+        <li>Fournir un support via tickets privés avec le staff.</li>
+    </ul>
+
+    <h2>Partage et sécurité :</h2>
+    <ul>
+        <li>Aucune donnée n’est vendue ou partagée avec des tiers.</li>
+        <li>Les données sont conservées uniquement le temps nécessaire au bon fonctionnement du bot.</li>
+        <li>Seuls les membres autorisés du serveur peuvent voir les logs et transcriptions de tickets.</li>
+    </ul>
+
+    <h2>Suppression des données :</h2>
+    <ul>
+        <li>Les données peuvent être supprimées si le bot est retiré du serveur.</li>
+        <li>Vous pouvez demander à un administrateur de supprimer vos données collectées par Nomy.</li>
+    </ul>
 </div>
 
 <!-- Terms of Service -->
@@ -100,14 +131,25 @@
     <p>
         En utilisant Nomy, vous acceptez les conditions suivantes :
     </p>
+
+    <h2>1. Utilisation autorisée :</h2>
     <ul>
-        <li>Vous êtes responsable des actions de votre compte Discord.</li>
-        <li>Nomy doit être utilisé conformément aux règles du serveur Discord et aux lois locales.</li>
-        <li>Les fonctionnalités de modération ne doivent pas être contournées ou exploitées à des fins malveillantes.</li>
-        <li>Le bot est fourni tel quel. Nomy's Dev Team n'est pas responsable des pertes de données ou problèmes techniques.</li>
-        <li>Tout abus du bot peut entraîner des restrictions sur son utilisation.</li>
+        <li>Le bot doit être utilisé conformément aux règles Discord et aux lois locales.</li>
+        <li>Aucune utilisation malveillante, spam ou contournement des fonctions de modération.</li>
+        <li>Respect des décisions de modération prises automatiquement ou par le staff.</li>
     </ul>
-    <p>Pour signaler un problème ou abus, contactez Nomy's Dev Team.</p>
+
+    <h2>2. Responsabilité :</h2>
+    <ul>
+        <li>Nomy est fourni "tel quel", sans garantie de disponibilité continue.</li>
+        <li>L’équipe Nomy's Dev n’est pas responsable des pertes de données ou incidents techniques.</li>
+        <li>Toute action abusive peut entraîner la suspension de l’accès au bot sur le serveur.</li>
+    </ul>
+
+    <h2>3. Modifications :</h2>
+    <ul>
+        <li>Ces termes peuvent être modifiés à tout moment. Les modifications prennent effet dès leur publication.</li>
+    </ul>
 </div>
 
 <!-- Credits -->
@@ -119,7 +161,7 @@
         <li>Logo et design graphique réalisés par l'équipe interne</li>
         <li>Documentation et site web par le même staff</li>
     </ul>
-    <img class="logo" src="URL_DU_LOGO" alt="Logo Nomy's Dev">
+    <img class="logo" src="54606503-b5ee-462a-90c9-256b4f5041f7.png" alt="Logo Nomy's Dev">
 </div>
 
 <script>
