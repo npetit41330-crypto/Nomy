@@ -1,176 +1,133 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Nomy – Legal & Credits</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #0f172a;
-            color: #e5e7eb;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #1e293b;
-            display: flex;
-            justify-content: center;
-            padding: 15px 0;
-        }
-
-        header button {
-            background: none;
-            border: none;
-            color: #e5e7eb;
-            font-size: 16px;
-            margin: 0 15px;
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-
-        header button:hover, header button.active {
-            color: #60a5fa;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 30px 20px;
-        }
-
-        .section {
-            display: none;
-        }
-
-        .section.active {
-            display: block;
-        }
-
-        h1, h2 {
-            color: #60a5fa;
-        }
-
-        p, li {
-            line-height: 1.7;
-        }
-
-        ul {
-            margin-left: 20px;
-        }
-
-        .box {
-            background-color: #020617;
-            border: 1px solid #1e293b;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 25px 0;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 14px;
-            color: #94a3b8;
-            margin-top: 50px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nomy - Documentation</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(160deg, #1e293b, #7f1d1d);
+        color: #f1f5f9;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background: #0f172a;
+        padding: 20px;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fbbf24;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 0;
+    }
+    nav button {
+        padding: 10px 20px;
+        background: #1e293b;
+        color: #f1f5f9;
+        border: 2px solid #fbbf24;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+    nav button:hover {
+        background: #fbbf24;
+        color: #1e293b;
+    }
+    .section {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        background: rgba(15,23,42,0.9);
+        border-radius: 12px;
+        display: none;
+    }
+    .section.active {
+        display: block;
+    }
+    h1 {
+        text-align: center;
+        color: #fbbf24;
+    }
+    ul {
+        line-height: 1.6;
+    }
+    img.logo {
+        display: block;
+        margin: 20px auto;
+        max-width: 300px;
+        border-radius: 12px;
+        border: 2px solid #fbbf24;
+    }
+</style>
 </head>
 <body>
 
-<header>
-    <button class="tab-btn active" data-tab="privacy">Privacy Policy</button>
-    <button class="tab-btn" data-tab="tos">Terms of Service</button>
-    <button class="tab-btn" data-tab="credits">Crédits</button>
-</header>
+<header>Nomy - Documentation</header>
 
-<div class="container">
+<nav>
+    <button onclick="showSection('privacy')">Privacy Policy</button>
+    <button onclick="showSection('tos')">Terms of Service</button>
+    <button onclick="showSection('credits')">Crédits</button>
+</nav>
 
-    <div id="privacy" class="section active">
-        <h1>Privacy Policy – Nomy</h1>
-        <div class="box">
-            <p>Cette Privacy Policy explique comment le bot Discord <strong>Nomy</strong> collecte, utilise et protège les données lorsqu’il est utilisé sur un serveur Discord.</p>
-        </div>
+<!-- Privacy Policy -->
+<div id="privacy" class="section active">
+    <h1>Privacy Policy</h1>
+    <p>
+        Nomy respecte votre vie privée. Voici comment vos informations sont utilisées :
+    </p>
+    <ul>
+        <li>Le bot collecte uniquement les données nécessaires à son fonctionnement (ID Discord, messages pour modération, XP et économie).</li>
+        <li>Aucune information personnelle n'est partagée avec des tiers.</li>
+        <li>Les tickets support peuvent contenir vos messages, visibles seulement par le staff et l'utilisateur qui a ouvert le ticket.</li>
+        <li>Les logs de modération sont stockés pour assurer la sécurité et la transparence sur le serveur.</li>
+        <li>Vous pouvez demander la suppression de vos données via un administrateur du serveur où Nomy est présent.</li>
+    </ul>
+    <p>Pour toute question concernant la vie privée, contactez Nomy's Dev Team.</p>
+</div>
 
-        <h2>1. Données collectées</h2>
-        <ul>
-            <li>ID utilisateur Discord</li>
-            <li>ID serveur et salons</li>
-            <li>Messages (modération, logs, tickets uniquement)</li>
-            <li>Données liées aux sanctions et au système d’XP</li>
-        </ul>
+<!-- Terms of Service -->
+<div id="tos" class="section">
+    <h1>Terms of Service</h1>
+    <p>
+        En utilisant Nomy, vous acceptez les conditions suivantes :
+    </p>
+    <ul>
+        <li>Vous êtes responsable des actions de votre compte Discord.</li>
+        <li>Nomy doit être utilisé conformément aux règles du serveur Discord et aux lois locales.</li>
+        <li>Les fonctionnalités de modération ne doivent pas être contournées ou exploitées à des fins malveillantes.</li>
+        <li>Le bot est fourni tel quel. Nomy's Dev Team n'est pas responsable des pertes de données ou problèmes techniques.</li>
+        <li>Tout abus du bot peut entraîner des restrictions sur son utilisation.</li>
+    </ul>
+    <p>Pour signaler un problème ou abus, contactez Nomy's Dev Team.</p>
+</div>
 
-        <h2>2. Utilisation des données</h2>
-        <p>Les données sont utilisées uniquement pour assurer les fonctionnalités de Nomy : modération, sécurité, tickets, logs, niveaux, rôles et animations.</p>
-
-        <h2>3. Logs et tickets</h2>
-        <p>Nomy peut enregistrer des événements de modération et générer des transcriptions de tickets, visibles uniquement par le staff autorisé.</p>
-
-        <h2>4. Partage des données</h2>
-        <p>Aucune donnée n’est vendue, partagée ou transmise à des tiers.</p>
-
-        <h2>5. Sécurité et suppression</h2>
-        <p>Les données sont conservées uniquement le temps nécessaire au bon fonctionnement du bot et peuvent être supprimées lors du retrait de Nomy du serveur.</p>
-
-        <h2>6. Modifications</h2>
-        <p>Cette Privacy Policy peut être modifiée à tout moment.</p>
-    </div>
-
-    <div id="tos" class="section">
-        <h1>Terms of Service – Nomy</h1>
-        <div class="box">
-            <p>En utilisant le bot Discord <strong>Nomy</strong>, vous acceptez pleinement les présentes Conditions d’Utilisation.</p>
-        </div>
-
-        <h2>1. Accès au bot</h2>
-        <p>Nomy est fourni gratuitement, sans garantie de disponibilité permanente.</p>
-
-        <h2>2. Utilisation autorisée</h2>
-        <ul>
-            <li>Respect des règles Discord</li>
-            <li>Respect des lois en vigueur</li>
-            <li>Respect des règles du serveur</li>
-        </ul>
-
-        <h2>3. Modération</h2>
-        <p>Les actions de modération de Nomy dépendent des paramètres définis par le staff. L’équipe du bot n’est pas responsable des décisions prises sur les serveurs.</p>
-
-        <h2>4. Responsabilité</h2>
-        <p>Nomy est fourni « en l’état ». Aucune responsabilité ne pourra être engagée en cas de dysfonctionnement ou de perte de données.</p>
-
-        <h2>5. Suspension</h2>
-        <p>L’accès à Nomy peut être suspendu en cas d’abus ou de non-respect de ces conditions.</p>
-
-        <h2>6. Modifications</h2>
-        <p>Les présentes conditions peuvent être modifiées à tout moment.</p>
-    </div>
-
-    <div id="credits" class="section">
-        <h1>Crédits</h1>
-        <div class="box">
-            <p>Création et développement :</p>
-            <ul>
-                <li>Nomy's Dev Team</li>
-                <li>Logo et design graphique réalisés par l'équipe interne</li>
-                <li>Documentation et site web par le même staff</li>
-            </ul>
-        </div>
-    </div>
-
+<!-- Credits -->
+<div id="credits" class="section">
+    <h1>Crédits</h1>
+    <p style="text-align:center;">Création et développement :</p>
+    <ul style="text-align:center; list-style-type:none;">
+        <li>Nomy's Dev Team</li>
+        <li>Logo et design graphique réalisés par l'équipe interne</li>
+        <li>Documentation et site web par le même staff</li>
+    </ul>
+    <img class="logo" src="URL_DU_LOGO" alt="Logo Nomy's Dev">
 </div>
 
 <script>
-    const tabs = document.querySelectorAll('.tab-btn');
+function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            sections.forEach(s => s.classList.remove('active'));
-            tab.classList.add('active');
-            document.getElementById(tab.dataset.tab).classList.add('active');
-        });
-    });
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(sectionId).classList.add('active');
+}
 </script>
 
 </body>
